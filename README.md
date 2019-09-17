@@ -1,5 +1,12 @@
 # MS17-010 Exploit Code
 
+##调用过程：
+python eternal_checker.py target_ip 补丁情况 The target is not patched->
+./listener_prep.sh 配置msf的反弹shell
+python zzz_exploit.py target_ip exploit利用
+
+## info
+
 This is some no-bs public exploit code that generates valid shellcode for the eternal blue exploit and scripts out the event listener with the metasploit multi-handler.
 
 This version of the exploit is prepared in a way where you can exploit eternal blue WITHOUT metasploit. Your options for auto shell generation are to generate shellcode with msfvenom that has meterpreter (i.e. with metasploit) or to generate a normal windows cmd shell (i.e. without metasploit). You may also select between staged and stageless payloads if you wish to avoid utilizing the msfconsole entirely and use netcat/your own shell handler. Alternatively you can elect to brew in your own shellcode.
